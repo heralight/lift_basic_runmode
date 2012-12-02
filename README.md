@@ -28,7 +28,7 @@ The current version 0.6-M1 does not work properly with jetty v8.
 To fix this problem, you can use my fork.
 
     In a temp directory
-    git clone git://github.com/heralight/sbt-plugins.git
+    git clone git://github.com/heralight/lift_basic_runmode.git
     cd sbt-plugin
     clean-cache
     publish-local
