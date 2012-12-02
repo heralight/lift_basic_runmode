@@ -115,7 +115,7 @@ make a clean before swapping modes.
 
 For more details on sbt-plugins, refer to [sbt-plugins Readme](https://github.com/untyped/sbt-plugins).
 
-
+To go further, I recommend you mix this project with the [lift-mongo.g8 produced by Tim Nelson](https://github.com/eltimn/lift-mongo.g8).
 
 ## Authors
 
