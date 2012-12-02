@@ -1,0 +1,174 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#Visual Studio files
+*.[Oo]bj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+/TestResults
+
+#Silverlight
+*.xap
+ClientBin/
+
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+
+#Project files
+[Bb]uild/
+
+#Subversion files
+.svn
+
+# Office Temp Files
+~$*
+
+#Gen Tool Archive
+Archive/
+
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Maven
+*/target/*
+.classpath
+.project
+.settings/
+
+**/target
+**/.classpath
+**/.project
+**/.settings
+**/.springBeans
+**/bin
+.DS_Store
+
+##### Scala IDEA
+# use glob syntax.
+syntax: glob
+*.ser
+*.class
+*~
+*.bak
+*.off
+*.old
+.DS_Store
+
+# logs
+derby.log
+
+# eclipse conf file
+.settings
+.classpath
+.project
+.manager
+.externalToolBuilders
+
+# ensime/emacs conf files
+.ensime
+.scala_dependencies
+
+# building
+target
+build
+null
+tmp*
+dist
+test-output
+
+# sbt
+target
+lib_managed
+src_managed
+*/project/boot
+*/*/project/boot
+
+# db
+lift_proto*
+
+
+# other scm
+.svn
+.CVS
+.hg*
+
+# switch to regexp syntax.
+#  syntax: regexp
+#  ^\.pc/
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea
+*.*___jb_old___
+*.*___jb_bak___
+.idea/libraries/
+.idea/artifacts/
+
+
+# Pax Runner (for easy OSGi launching)
+runner
+/project/project
+/src/main/webapp/WEB-INF/jetty-web.xml
+
+mongo.log
+dependencies/
+mongo-testdb/
+tools/
+
+.idea/
+.idea_modules/
+tools/*
+tools
+
+/src/main/resources/rebel.xml
+/src/main/webapp/admin/css/enhancements.css
+/src/main/webapp/admin/css/reset.css
+/modules/bootstrap/bootstrap/*
+modules/bootstrap/bootstrap/*
+
+*.db
+*.log
+
+
+.history

@@ -1,0 +1,6 @@
+alias st=;container:stop;container:start
+alias sl= ;container:stop;~container:start
+alias stop=container:stop
+alias start=container:start
+alias c = compile
+
