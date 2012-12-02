@@ -8,7 +8,7 @@
  * jquery 1.8.3
  * conditional runMode snippet
 
-### Goal
+## Goal
 
 Optimize build process in development and production by:
 
@@ -18,7 +18,7 @@ Optimize build process in development and production by:
  * simplify debugging by separating files in development mode.
  * test production output easily
 
-### Installation
+## Installation
 
 Uses [sbt-plugins](https://github.com/untyped/sbt-plugins) plugins.
 
@@ -31,7 +31,7 @@ To fix this problem, you can use my fork.
     clean-cache
     publish-local
 
-### Structure
+## Structure
 
 css and less in main/css
 js, coffeescript, template in main/js
@@ -40,7 +40,7 @@ These directories will be filtered and copied to resourceManaged and include in 
 
 main js and css name : "app"
 
-### naming convention
+## naming convention
 
 if filename contains (rules in build.sbt)
  * .p. == production
@@ -49,21 +49,21 @@ if filename contains (rules in build.sbt)
 
  (a.p.xxx, a.d.xxx, a.xxx)
 
-#### e.g.:
+### e.g.:
 
  * app.a.d.css => main css file in development and this file will be included to output directory.
  * app.a.p.js => main js file in production and this file will be included to output directory.
  * app-part.less => not parsed if not import in any "a" file.
 
-### Usages
+## Usages
 
 start in development:
 
-    dst or development:start
+    development:start
 
 start in production:
 
-    pst or production:start
+    production:start
 
 stop in development:
 
@@ -89,14 +89,33 @@ clean output:
     to clean only css xxmode:less::clean
     to clean only js xxmode:js::clean
 
-#### Recommendation
+### Alias
+
+> already set in .sbtrc
+
+alias dst=;development:stop;development:start
+alias pst=;production:stop;production:start
+alias dsl= ;development:stop;~development:start
+alias psl= ;production:stop;~production:start
+alias dstop=development:stop
+alias dstart=development:start
+alias dc = development:compile
+alias pstop=production:stop
+alias pstart=production:start
+alias pc = production:compile
+alias dclean=development:clean
+alias pclean=production:clean
+alias djclean=development:js::clean
+alias dlclean=development:less::clean
+
+### Recommendation
 make a clean before swapping modes.
 
 For more details on sbt-plugins, refer to [sbt-plugins Readme](https://github.com/untyped/sbt-plugins).
 
 
 
-### Authors
+## Authors
 
 based on https://github.com/lift/lift_25_sbt
 
