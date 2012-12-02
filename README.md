@@ -36,7 +36,7 @@ To fix this problem, you can use my fork.
 css and less in main/css
 js, coffeescript, template in main/js
 
-These directories will be filtered and copy to resourceManaged and include in webappResources.
+These directories will be filtered and copied to resourceManaged and include in webappResources.
 
 main js and css name : "app"
 
@@ -58,32 +58,40 @@ if filename contains (rules in build.sbt)
 ### Usages
 
 start in development:
+
     dst or development:start
 
 start in production:
+
     pst or production:start
 
 stop in development:
+
     development:stop
 
 stop in production:
+
     production:stop
 
 dst and pst will do a stop and a start.
 
 compile css manually:
+
     xxmode:less
 
 compile js manually:
+
     xxmode:js
 
 clean output:
+
     xxmode:clean
     to clean only css xxmode:less::clean
     to clean only js xxmode:js::clean
 
 #### Recommendation
 make a clean before swapping modes.
+
 For more details on sbt-plugins, refer to [sbt-plugins Readme](https://github.com/untyped/sbt-plugins).
 
 
