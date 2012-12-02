@@ -7,7 +7,7 @@
  * modernizr
  * jquery 1.8.3
  * conditional runMode snippet
- * Twitte Bootstrap included to illustrate the use of sbt shell tasks
+ * Twitter Bootstrap included to illustrate the use of sbt shell tasks
 
 ## Goal
 
