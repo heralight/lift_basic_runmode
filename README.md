@@ -7,6 +7,7 @@
  * modernizr
  * jquery 1.8.3
  * conditional runMode snippet
+ * Twitte Bootstrap included to illustrate the use of sbt shell tasks
 
 ## Goal
 
@@ -17,6 +18,7 @@ Optimize build process in development and production by:
  * compress file or not
  * simplify debugging by separating files in development mode.
  * test production output easily
+ * Add custom sbt task like bash script and link to actions
 
 ## Installation
 
