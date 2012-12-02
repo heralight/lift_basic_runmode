@@ -93,20 +93,20 @@ clean output:
 
 > already set in .sbtrc
 
-alias dst=;development:stop;development:start
-alias pst=;production:stop;production:start
-alias dsl= ;development:stop;~development:start
-alias psl= ;production:stop;~production:start
-alias dstop=development:stop
-alias dstart=development:start
-alias dc = development:compile
-alias pstop=production:stop
-alias pstart=production:start
-alias pc = production:compile
-alias dclean=development:clean
-alias pclean=production:clean
-alias djclean=development:js::clean
-alias dlclean=development:less::clean
+    alias dst=;development:stop;development:start
+    alias pst=;production:stop;production:start
+    alias dsl= ;development:stop;~development:start
+    alias psl= ;production:stop;~production:start
+    alias dstop=development:stop
+    alias dstart=development:start
+    alias dc = development:compile
+    alias pstop=production:stop
+    alias pstart=production:start
+    alias pc = production:compile
+    alias dclean=development:clean
+    alias pclean=production:clean
+    alias djclean=development:js::clean
+    alias dlclean=development:less::clean
 
 ### Recommendation
 make a clean before swapping modes.
