@@ -4,7 +4,16 @@ version := "0.0.1"
 
 organization := "net.liftweb"
 
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.2"
+
+javacOptions := Seq("-g", "-source", "1.7", "-target", "1.7", "-encoding", "utf8")
+
+
+scalacOptions := Seq("-unchecked", "-optimise", "-feature",
+  "-deprecation", "-Xcheckinit", "-encoding", "utf8",
+  "-language:reflectiveCalls",
+  "-language:implicitConversions",
+  "-language:postfixOps")
 
 resolvers ++= Seq( "fr" at "http://maven.antelink.com/content/repositories/central/",
 					"uk" at "http://uk.maven.org/maven2"//,
@@ -12,22 +21,46 @@ resolvers ++= Seq( "fr" at "http://maven.antelink.com/content/repositories/centr
 					//"releases"        at "http://oss.sonatype.org/content/repositories/releases"
                 )
 
-seq(com.github.siasia.WebPlugin.webSettings :_*)
+ideaExcludeFolders += "logs"
 
-scalacOptions ++= Seq("-deprecation", "-unchecked")
+ideaExcludeFolders += "project/project"
 
-libraryDependencies ++= {
-  val liftVersion = "2.5-M3"
-  Seq(
-    "net.liftweb"       %% "lift-webkit"        % liftVersion        % "compile",
-    "net.liftweb"       %% "lift-mapper"        % liftVersion        % "compile",
-    //"net.liftmodules"   %% "lift-jquery-module" % (liftVersion + "-1.0"),
-    "org.eclipse.jetty" % "jetty-webapp"        % "8.1.7.v20120910"  % "container,test",
-    "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container,test" artifacts Artifact("javax.servlet", "jar", "jar"),
-    "ch.qos.logback"    % "logback-classic"     % "1.0.6",
-    "org.specs2"        %% "specs2"             % "1.12.1"           % "test",
-    "com.h2database"    % "h2"                  % "1.3.167"
-  )
+ideaExcludeFolders += "project/boot"
+
+ideaExcludeFolders += "project/project/project/target"
+
+ideaExcludeFolders += "project/project/target"
+
+ideaExcludeFolders += "project/target"
+
+ideaExcludeFolders += ".idea"
+
+ideaExcludeFolders += ".idea_modules"
+
+seq(webSettings :_*)
+
+{
+  object V {
+    val lift = "2.5.1"
+    val liftmodule = "2.5"
+    //val Akka = "2.2.1"
+    val databinder =  "0.11.0"
+    val scalaz = "6.0.4"
+    val spec2 = "2.2.3"
+    val rogue = "2.2.0"
+  }
+  libraryDependencies ++= {
+    Seq(
+      "net.liftweb"       %% "lift-webkit"        % V.lift        % "compile",
+      "net.liftweb"       %% "lift-mapper"        % V.lift        % "compile",
+      //"net.liftmodules"   %% "lift-jquery-module" % (liftVersion + "-1.0"),
+      "org.eclipse.jetty"       %  "jetty-webapp" % "9.0.5.v20130815"  % "container,test",
+      "org.eclipse.jetty.orbit" % "javax.servlet" % "3.0.0.v201112011016" % "container,test" artifacts Artifact("javax.servlet", "jar", "jar"),
+      "ch.qos.logback"    % "logback-classic"     % "1.0.9",
+      "org.specs2"        %% "specs2"             %  V.spec2          % "test",
+      "com.h2database"    % "h2"                  % "1.3.167"
+    )
+  }
 }
 
 ///////////////// sbt-plugins

@@ -1,6 +1,6 @@
-# Liftweb sample 2.5-M3 with [sbt-plugins](https://github.com/untyped/sbt-plugins)
+# Liftweb sample 2.5.1 with [sbt-plugins](https://github.com/untyped/sbt-plugins)
 
- * Lift 2.5-M3
+ * Lift 2.5.1
  * sbt-runMode (development, production)
  * sbt-js
  * sbt-less
@@ -24,14 +24,6 @@ Optimize build process in development and production by:
 
 Uses [sbt-plugins](https://github.com/untyped/sbt-plugins) plugins.
 
-The current version 0.6-M1 does not work properly with jetty v8.
-To fix this problem, you can use my fork.
-
-    In a temp directory
-    git clone git://github.com/heralight/lift_basic_runmode.git
-    cd sbt-plugin
-    clean-cache
-    publish-local
 
 ## Structure
 
@@ -124,6 +116,9 @@ based on https://github.com/lift/lift_25_sbt
 Thanks to [lift Team](http://www.liftweb.net/) and [sbt-plugins](https://github.com/untyped/sbt-plugins) Team.
 
 [Alexandre Richonnier](http://www.hera.cc)
+[Heirko](http://www.heirko.com)
+
+used in [Primimo - geotagged real estate ads](http://primimo.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

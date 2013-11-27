@@ -2,7 +2,7 @@ import sbt._
 import Keys._
 import com.untyped.sbtrunmode.Plugin._
 import sbt.Project.Initialize
-import com.github.siasia.{PluginKeys=>WebKeys}
+import com.earldouglas.xsbtwebplugin.{PluginKeys=>WebKeys}
 
 object RootProject extends Build {
 
@@ -11,6 +11,7 @@ object RootProject extends Build {
     cpDevBootstrapTask.in(Development) <<=  cpDevBootstrapAction,
     cpProdBootstrapTask.in(Production) <<=  cpProdBootstrapAction,
     makeDevBootstrapTask.in(Development) <<=  makeDevBootstrapAction,
+
     WebKeys.webappResources.in(Development) <<= WebKeys.webappResources.in(Compile),
     WebKeys.webappResources.in(Production) <<= WebKeys.webappResources.in(Compile)
   //,
@@ -26,7 +27,7 @@ object RootProject extends Build {
 
   val cpDevBootstrapAction = (streams) map {
     s => {
-      List("sh", "-c", "(mkdir -p target/scala-2.9.2/resource_managed/main/; cp -r modules/bootstrap/bootstrap/* target/scala-2.9.2/resource_managed/main/)") ! ;
+      List("sh", "-c", "(mkdir -p target/scala-2.10/resource_managed/main/; cp -r modules/bootstrap/bootstrap/* target/scala-2.10/resource_managed/main/)") ! ;
       s.log.info("cp-dev-bootstrap")
     }
   }
@@ -44,7 +45,7 @@ object RootProject extends Build {
 
   val cpProdBootstrapAction = (streams) map {
     s => {
-      List("sh", "-c", "(mkdir -p target/scala-2.9.2/resource_managed/main/; cp -r modules/bootstrap/bootstrap/img target/scala-2.9.2/resource_managed/main/)") ! ;
+      List("sh", "-c", "(mkdir -p target/scala-2.10/resource_managed/main/; cp -r modules/bootstrap/bootstrap/img target/scala-2.10/resource_managed/main/)") ! ;
       s.log.info("cp-prod-bootstrap")
     }
   }
